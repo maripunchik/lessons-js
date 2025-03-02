@@ -16,7 +16,9 @@ if (confirm("Почати тестування?")) {
   }
   const averageTemp = tempSum / numMonth;
   document.write(
-    `Середня температура за ${numMonth} місяців - ${averageTemp.toFixed(2)}°C`
+    `<div class="task__subtitle task__subtitle--green">Середня температура за ${numMonth} місяців - ${averageTemp.toFixed(
+      2
+    )}°C</div>`
   );
 }
 

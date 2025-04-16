@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<title>Lesson 13</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" id="header">
+			<div class="header__container">
+				<div class="header__logo">
+					<img src="img/js-logo.jpg" alt="логотип компанії JavaScript" class="header__img">
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__practice practice">
+				<div class="practice__container">
+					<h1 class="practice__title">
+						Урок №13. Масиви. Рекурсія. Замикання
+					</h1>
+					<script src="js/lesson13.js"></script>
+					<ul class="practice__tasks-list tasks-list">
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task1/task1.html"
+								class="task__link">
+								<h2 class="task__title">Задача №1</h2>
+								<div class="task__question">
+									<p> Генерація всіх підмножин: Реалізуйте рекурсивну функцію, яка генерує всі можливі підмножини заданого масиву. Наприклад,
+									для масиву [1, 2, 3] можливі підмножини: [], [1], [2], [3], [1, 2], [1, 3], [2, 3], [1, 2, 3].
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task2/task2.html"
+								class="task__link">
+								<h2 class="task__title">Задача №2 <span>На перевірку</span></h2>
+								<div class="task__question">
+									<p>Дано масив імен спортсменів. Розробити програму для виведення усіх можливих результатів змагань (списки імен у
+									відповідності до місць, які вони займуть).
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task3/task3.html"
+								class="task__link">
+								<h2 class="task__title">Задача №3</h2>
+								<div class="task__question">
+									<p>Виведіть всі можливі наступні комбінації ходів користувачів у грі“Хрестики-нулики”, починаючи з деякої заданої ситуації
+									&lpar;тобто маємо двовимірний масив з елементами : 0 - нулик, Х - хрестик, пробіл - ще не зайнято, і вам треба самостійно
+									вивести всі можливі шляхи заповнення ще незаповнених клітинок (де пробіли). Поки можна не підраховувати чи вже є 3
+									хрестики чи 3 нулики у рядок.
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task4/task4.html"
+								class="task__link">
+								<h2 class="task__title">Задача №4 <span>На перевірку</span></h2>
+								<div class="task__question">
+									<p> Дано масив хлопців і дівчат вивести всі можливі комбінації для танців з хлопців і дівчат.
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task5/task5.html"
+								class="task__link">
+								<h2 class="task__title">Задача №5</h2>
+								<div class="task__question">
+									<p>З використанням замикань розробити ітератор, тобто функцію, що буде поступово за окремими викликами видавати по одне
+									значення від заданого мінімального до заданого максимального. Якщо значення досягне максимального, то наступним буде
+									мінімальне значення. З використанням цієї функції реалізувати перебір номерів місяців.
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task6/task6.html"
+								class="task__link">
+								<h2 class="task__title">Задача №6 <span>На перевірку</span></h2>
+								<div class="task__question">
+									<p>З використанням замикань розробити ітератор, тобто функцію, що буде поступово за окремими викликами видавати одну букву наперед заданого слова. З використанням нього розробити гру «Перекладач». Виводимо для користувача опис цього слова
+									і по одну букву користувач вводить переклад цього слова. Підрахувати кількість вгаданих букв.
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task7/task7.html"
+								class="task__link">
+								<h2 class="task__title">Задача №7</h2>
+								<div class="task__question">
+									<p> Тренажер додавання. Кожні 10 секунд користувачу задають випадковий приклад з додавання двох цифр і робиться перевірка.
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task8/task8.html"
+								class="task__link">
+								<h2 class="task__title">Задача №8</h2>
+								<div class="task__question">
+									<p>При старті питаємо у користувача чи хоче він читати новини. Якщо так, то одразу переходимо до сайту Ukr.Net, якщо ні, то
+									через 20 секунд самі переходимо на сайт ukr.net. Для цього через 20 секунд після відкриття треба виконати команду window.location.href = 'https://www.ukr.net/'
+									</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<a class="footer__link" href="../index.html" target="_blank">На головну сторінку</a>
+		</footer>
+
+	</div>
+
+</body>
+
+</html>

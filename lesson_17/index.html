@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<title>Lesson 17</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" id="header">
+			<div class="header__container">
+				<div class="header__logo">
+					<img src="img/js-logo.jpg" alt="логотип компанії JavaScript" class="header__img">
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__practice practice">
+				<div class="practice__container">
+					<h1 class="practice__title">
+						Урок №17. Класи. Статичні методи. Композиція, агрегація
+					</h1>
+					<script src="js/lesson17.js"></script>
+					<ul class="practice__tasks-list tasks-list">
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task1/task1.html"
+								class="task__link">
+								<h2 class="task__title">Задача №1 <span>На перевірку</span></h2>
+								<div class="task__question">
+									<p> Створити клас, що дозволяє виконувати такі операції над масивами: знаходження кількості додатних, кількості від’ємних,
+									кількість входжень деякого числа (статичні методи)
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task2/task2.html"
+								class="task__link">
+								<h2 class="task__title">Задача №2</h2>
+								<div class="task__question">
+									<p>Створити службове авто (водій, марка, номер). Створити клас таким чином, щоб можна було створити тільки один екземпляр
+									цього класу.
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task3/task3.html"
+								class="task__link">
+								<h2 class="task__title">Задача №3</h2>
+								<div class="task__question">
+									<p>Створити клас Нагадувач. Кожні вказані кількості секунд (використати setInterval) програма нагадує про якусь подію (це
+									просто текст) і також виводиться порядковий номер скільки раз вже нагадування було. Зробити так, щоб неможна було
+									зробити одночасно декілька об’єктів-нагадувачів. Методи зупинки таймера, метод зміни повідомлення без зупинки таймера.
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task4/task4.html"
+								class="task__link">
+								<h2 class="task__title">Задача №4</h2>
+								<div class="task__question">
+									<p>Склад. База товарів, які зберігаються на складі: назва товару, одиниця виміру, кількість, фірма виробник (назва,
+									реєстраційний номер). Організувати реєстрацію/відвантаження товарів, фільтрація за назвою товару, фільтрація за назвою
+									фірми
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task5/task5.html" class="task__link">
+								<h2 class="task__title">Задача №5 <span>На перевірку</span></h2>
+								<div class="task__question">
+									<p>Дано два класи <code>MultiChecker</code>(клас для перевірки таблиці множення - рандомно генеруються
+										числа, які треба перемножати),
+										<code>AddChecker</code> (клас для перевірки додавання - рандомно генеруються числа у заданому
+										діапазоні, які треба додавати). Обидва
+										класи надсилають результати тестування об'єкту класу <code>History</code>, який зберігає історію
+										тестування у масиві у вигляді
+										об'єктів<br>
+										<strong>Приклад.</strong>
+									<pre>
+																			testsList= [
+																		{
+																			firstNum:1, 
+																			secondNum:5,
+																			operation:'*', 
+																			userAnswer:7, 
+																			correctAnswer:5
+																		},
+																		{
+																			firstNum:3, 
+																			secondNum:4,
+																			operation:'+', 
+																			userAnswer:7, 
+																			correctAnswer:7
+																		},]
+																		</pre>
+									Можна створити окремий клас <code>TestData</code>, який описує один такий тест і у якому будуть ці
+									поля.
+									Розробити клас <code>TestManager</code>, який використовуючи ці класи за допомогою таймера періодично
+									генерує якісь N задач (рандомно
+									вибираємо, що опитувати: додавання чи множення) і проводить опитування. Результати тестування
+									додаються в об’єкт
+									<code>History</code>. Зробити так, щоб об'єкт такого класу можна було створити тільки один. Коли
+									зроблено ці N задач вивести усю
+									історію на екран.
+									</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<a class="footer__link" href="../index.html" target="_blank">На головну сторінку</a>
+		</footer>
+
+	</div>
+
+</body>
+
+</html>

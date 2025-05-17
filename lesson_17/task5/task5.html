@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/task.css">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<title>Task 5</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" id="header">
+			<div class="header__container">
+				<div class="header__logo">
+					<img src="img/js-logo.jpg" alt="логотип компанії JavaScript" class="header__img">
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__task task">
+				<div class="task__container">
+					<h1 class="task__title">
+						Задача №5
+					</h1>
+					<div class="task__text">
+						<p>Дано два класи <code>MultiChecker</code>(клас для перевірки таблиці множення - рандомно генеруються
+							числа, які треба перемножати),
+							<code>AddChecker</code> (клас для перевірки додавання - рандомно генеруються числа у заданому
+							діапазоні, які треба додавати). Обидва
+							класи надсилають результати тестування об'єкту класу <code>History</code>, який зберігає історію
+							тестування у масиві у вигляді
+							об'єктів<br>
+							<strong>Приклад.</strong>
+						<pre>
+							testsList= [
+						{
+							firstNum:1, 
+							secondNum:5,
+							operation:'*', 
+							userAnswer:7, 
+							correctAnswer:5
+						},
+						{
+							firstNum:3, 
+							secondNum:4,
+							operation:'+', 
+							userAnswer:7, 
+							correctAnswer:7
+						},]
+					   </pre>
+						Можна створити окремий клас <code>TestData</code>, який описує один такий тест і у якому будуть ці
+						поля.
+						Розробити клас <code>TestManager</code>, який використовуючи ці класи за допомогою таймера періодично
+						генерує якісь N задач (рандомно
+						вибираємо, що опитувати: додавання чи множення) і проводить опитування. Результати тестування
+						додаються в об’єкт
+						<code>History</code>. Зробити так, щоб об'єкт такого класу можна було створити тільки один. Коли
+						зроблено ці N задач вивести усю
+						історію на екран.
+						</p>
+					</div>
+					<script src="js/task_05.js"></script>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<a class="footer__link" href="../index.html">Урок №17. Класи. Статичні методи. Композиція, агрегація</a>
+			<a class="footer__link" href="../../index.html">На головну сторінку</a>
+		</footer>
+	</div>
+
+</body>
+
+</html>

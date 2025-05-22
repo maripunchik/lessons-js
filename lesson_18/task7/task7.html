@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/task.css">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<title>Task 7</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" id="header">
+			<div class="header__container">
+				<div class="header__logo">
+					<img src="img/js-logo.jpg" alt="логотип компанії JavaScript" class="header__img">
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__task task">
+				<div class="task__container">
+					<h1 class="task__title">
+						Задача №7
+					</h1>
+					<div class="task__text">
+						<p>Подорож складається з 3 етапів. На кожному етапі користувач може вибрати один з видів транспорту
+							(авто, автобус, літак -
+							випадаючий список), харчування (сніданок, обід, вечеря – checkbоx) та одного з 3-х
+							гідів(використати - radio buttons).
+							Ціни визначте самі. Підрахувати загальну вартість.
+						</p>
+					</div>
+					<form class="task__travel travel">
+						<div class="travel__stage">
+							<h4 class="travel__sub-title">Етап №1</h4>
+							<fieldset class="travel__fieldset">
+								<legend class="travel__legend">Транспорт:</legend>
+								<select class="travel__select" name="" id="">
+									<option class="travel__transport" value="300">Авто - 300грн</option>
+									<option class="travel__transport" value="100">Автобус - 100грн</option>
+									<option class="travel__transport" value="2000">Літак - 2000грн</option>
+								</select>
+							</fieldset>
+							<fieldset class="travel__fieldset">
+								<legend class="travel__legend">Харчування:</legend>
+								<label>
+									<input class="travel__meals" type="checkbox" name="breakfast1" value="100">Сніданок <span>100грн</span>
+								</label>
+								<label>
+									<input class="travel__meals" type="checkbox" name="lunch2" value="150">Обід <span>150грн</span>
+								</label>
+								<label>
+									<input class="travel__meals" type="checkbox" name="dinner3" value="200">Вечеря <span>200грн</span>
+								</label>
+							</fieldset>
+							<fieldset class="travel__fieldset">
+								<legend class="travel__legend">Гід:</legend>
+								<label>
+									<input class="travel__guides" type="radio" name="guide_stage1" value="700">Пан Андрій <span>700грн</span>
+								</label>
+								<label>
+									<input class="travel__guides" type="radio" name="guide_stage1" value="800">Пані Дарина <span>800грн</span>
+								</label>
+								<label>
+									<input class="travel__guides" type="radio" name="guide_stage1" value="850">Пані Ганна <span>850грн</span>
+								</label>
+							</fieldset>
+						</div>
+						<div class="travel__stage">
+							<h4 class="travel__sub-title">Етап №2</h4>
+							<fieldset class="travel__fieldset">
+								<legend class="travel__legend">Транспорт:</legend>
+								<select class="travel__select" name="" id="">
+									<option class="travel__transport" value="350">Авто - 350грн</option>
+									<option class="travel__transport" value="150">Автобус - 150грн</option>
+									<option class="travel__transport" value="2500">Літак - 2500грн</option>
+								</select>
+							</fieldset>
+							<fieldset class="travel__fieldset">
+								<legend class="travel__legend">Харчування:</legend>
+								<label>
+									<input class="travel__meals" type="checkbox" name="breakfast" value="150">Сніданок <span>150грн</span>
+								</label>
+								<label>
+									<input class="travel__meals" type="checkbox" name="lunch" value="200">Обід <span>200грн</span>
+								</label>
+								<label>
+									<input class="travel__meals" type="checkbox" name="dinner" value="300">Вечеря <span>300грн</span>
+								</label>
+							</fieldset>
+							<fieldset class="travel__fieldset">
+								<legend class="travel__legend">Гід:</legend>
+								<label>
+									<input class="travel__guides" type="radio" name="guide_stage2" value="800">Пан Богдан <span>800грн</span>
+								</label>
+								<label>
+									<input class="travel__guides" type="radio" name="guide_stage2" value="900">Пан Роман <span>900грн</span>
+								</label>
+								<label>
+									<input class="travel__guides" type="radio" name="guide_stage2" value="1000">Пані Марія <span>1000грн</span>
+								</label>
+							</fieldset>
+						</div>
+						<div class="travel__stage">
+							<h4 class="travel__sub-title">Етап №3</h4>
+							<fieldset class="travel__fieldset">
+								<legend class="travel__legend">Транспорт:</legend>
+								<select class="travel__select" name="" id="">
+									<option class="travel__transport" value="400">Авто - 400грн</option>
+									<option class="travel__transport" value="200">Автобус - 200грн</option>
+									<option class="travel__transport" value="3000">Літак - 3000грн</option>
+								</select>
+							</fieldset>
+							<fieldset class="travel__fieldset">
+								<legend class="travel__legend">Харчування:</legend>
+								<label>
+									<input class="travel__meals" type="checkbox" name="breakfast3" value="200">Сніданок <span>200грн</span>
+								</label>
+								<label>
+									<input class="travel__meals" type="checkbox" name="lunch3" value="250">Обід <span>250грн</span>
+								</label>
+								<label>
+									<input class="travel__meals" type="checkbox" name="dinner3" value="350">Вечеря <span>350грн</span>
+								</label>
+							</fieldset>
+							<fieldset class="travel__fieldset">
+								<legend class="travel__legend">Гід:</legend>
+								<label>
+									<input class="travel__guides" type="radio" name="guide_stage3" value="1000">Пан Степан <span>1000грн</span>
+								</label>
+								<label>
+									<input class="travel__guides" type="radio" name="guide_stage3" value="1100">Пан Кирило <span>1100грн</span>
+								</label>
+								<label>
+									<input class="travel__guides" type="radio" name="guide_stage3" value="1200">Пані Ірина <span>1200грн</span>
+								</label>
+							</fieldset>
+						</div>
+						<div class="travel__summary">
+							<button type="button" onclick="calculateTotal()">Підрахувати загальну вартість:</button>
+							<p id="totalCost">Загальна вартість: 0грн</p>
+						</div>
+					</form>
+					<script src="js/task_07.js"></script>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<a class="footer__link" href="../index.html">Урок №18. DOM, BOM, Document. Події - початок</a>
+			<a class="footer__link" href="../../index.html">На головну сторінку</a>
+		</footer>
+	</div>
+
+</body>
+
+</html>

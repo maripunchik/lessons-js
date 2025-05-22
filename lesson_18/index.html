@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<title>Lesson 18</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" id="header">
+			<div class="header__container">
+				<div class="header__logo">
+					<img src="img/js-logo.jpg" alt="логотип компанії JavaScript" class="header__img">
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__practice practice">
+				<div class="practice__container">
+					<h1 class="practice__title">
+						Урок №18. DOM, BOM, Document. Події - початок
+					</h1>
+					<ul class="practice__tasks-list tasks-list">
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task1/task1.html"
+								class="task__link">
+								<h2 class="task__title">Задача №1</h2>
+								<div class="task__question">
+									<p> Розробити калькулятор
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task2/task2.html"
+								class="task__link">
+								<h2 class="task__title">Задача №2</h2>
+								<div class="task__question">
+									<p>Зробити конвертер валют (курси валют – константи у скрипті)
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task3/task3.html"
+								class="task__link">
+								<h2 class="task__title">Задача №3</h2>
+								<div class="task__question">
+									<p>Користувач задає рік народження. Визначити кількість років користувача.
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task4/task4.html"
+								class="task__link">
+								<h2 class="task__title">Задача №4</h2>
+								<div class="task__question">
+									<p>Наперед задано у скрипті масив зі списком бажань. Після завантаження сторінки випадковим
+										чином вибираються 3 і
+										відображаються у окремих div (їх треба створити і додати на сторінку)
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task5/task5.html"
+								class="task__link">
+								<h2 class="task__title">Задача №5</h2>
+								<div class="task__question">
+									<p>Відобразити таблицю 3*4 з випадковими числами (її треба динамічно створити і вставити на
+										сторінку)
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task6/task6.html"
+								class="task__link">
+								<h2 class="task__title">Задача №6</h2>
+								<div class="task__question">
+									<p>Користувач задає кількість оцінок і натискає на кнопку «get table». В результаті
+										формується таблиця з input, куди
+										користувач вводить оцінки. Після цього натискає на кнопку “get sum” і знаходить середнє
+										значення.
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task7/task7.html"
+								class="task__link">
+								<h2 class="task__title">Задача №7</h2>
+								<div class="task__question">
+									<p>Подорож складається з 3 етапів. На кожному етапі користувач може вибрати один з видів
+										транспорту (авто, автобус, літак -
+										випадаючий список), харчування (сніданок, обід, вечеря – checkbоx) та одного з 3-х
+										гідів(використати - radio buttons).
+										Ціни визначте самі. Підрахувати загальну вартість.
+									</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+
+					<!-- Приклад -->
+					<!-- <div id="myFirstDiv">00000111111111111111111111111</div>
+					
+					<div id="test1">
+						<div>Base div</div>
+					</div>
+					
+					<div id="test2">
+						<div>Base div 2</div>
+					</div> -->
+
+					<!-- <div>
+						<h1 class="practice__title">Title</h1>
+						<p id="first" class="edge">
+							Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello.
+							Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello.
+							Hello. Hello. Hello. Hello. Hello. Hello.
+						</p>
+						<h1 class="practice__title">Title</h1>
+						<section>
+							<p id="MyTitle2" class="middle">
+								222222222222222222 From From From From From From From From From From
+								From From From From From From From From From From From From From From
+								From From From From From From From From
+							</p>
+						</section>
+					
+						<h1 id="First1">Title first</h1>
+						<p>
+							From From From From From From From From From From From From From From
+							From From From From From From From From From From From From From From
+							From From From From
+						</p>
+						<section>
+							<p class="middle">
+								<b> Text Text Text Text Text Text </b>
+								<b> Text Text Text Text Text Text </b>
+								<b> Text Text Text Text Text Text </b>
+							</p>
+						</section>
+					</div> -->
+
+					<!-- Приклад 2 -->
+					<!-- <div id="myContainer"></div> -->
+
+					<!-- Приклад 3 -->
+					<!-- 
+					<head>
+						<title>Document</title>
+						<style>
+							.selected {
+								border: 2px solid green;
+							}
+
+							.danger {
+								color: red;
+							}
+						</style>
+					</head>
+
+					<body>
+						<div>
+							<label>
+								Age
+								<input type="text" />
+							</label>
+						</div>
+						<div id="my" class="selected">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem magnam,
+							tempora repellat facere sunt veniam. Molestiae aperiam, voluptate eaque
+							eius maiores, commodi hic illum possimus vitae corporis officia culpa
+							voluptatibus.
+						</div> -->
+
+					<!-- Приклад 4 -->
+
+					<!-- 	<h1>Напої</h1>
+						<div>
+							<label>
+								Чай
+								<input type="checkbox" value="10" />
+							</label>
+							<label>
+								Сік
+								<input type="checkbox" value="20" />
+							</label>
+							<label>
+								Кава
+								<input type="checkbox" value="35" />
+							</label>
+						</div>
+						
+						<h1>Перша страва</h1>
+						<div>
+							<label>
+								Суп
+								<input type="checkbox" value="45" />
+							</label>
+							<label>
+								Борщ
+								<input type="checkbox" value="37" />
+							</label>
+						</div>
+						<h1>Друга страва</h1>
+						<div>
+							<label>
+								Паста
+								<input type="checkbox" value="60" />
+							</label>
+							<label>
+								Картопля з котлетою
+								<input type="checkbox" value="55" />
+							</label>
+							<label>
+								Гречка з грибами
+								<input type="checkbox" value="49" />
+							</label>
+						</div>
+						<div>
+							<button>Розрахувати загальну вартість</button>
+						</div>
+						<div>Загалом : <span id="result"></span></div> -->
+
+					<!-- Приклад 5 -->
+
+					<!-- <div> -->
+					<!-- // -----перше ---
+						// • суп – 45 грн
+						// • борщ - 37 грн.-->
+					<!-- <h1>Перша страва</h1>
+						<select id="firstScore">
+							<option value="45">суп</option>
+							<option value="37">борщ</option>
+						</select> -->
+					<!--
+						// ---- друге –
+						// • паста – 60 грн.
+						// • картопля з катлетою – 55 грн.
+						// • гречка з грибами – 49 грн.  if (inp.checked) -->
+					<!-- <h1>Друга страва</h1>
+						<select id="secondScore">
+							<option value="60">паста</option>
+							<option value="55">картопля з котлетою</option>
+							<option value="49">гречка з грибами</option>
+						</select>
+					</div>
+					<button>Розрахувати загальну вартість</button>
+
+					<div>Загалом : <span id="result"></span></div> -->
+				</div>
+				<script src="js/lesson18.js"></script>
+
+
+			</section>
+
+		</main>
+		<footer class="footer">
+			<a class="footer__link" href="../index.html" target="_blank">На головну сторінку</a>
+		</footer>
+
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/task.css">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<title>Task 2</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" id="header">
+			<div class="header__container">
+				<div class="header__logo">
+					<img src="img/js-logo.jpg" alt="логотип компанії JavaScript" class="header__img">
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__task task">
+				<div class="task__container">
+					<h1 class="task__title">
+						Задача №2
+					</h1>
+					<div class="task__text">
+						<p>Зробити конвертер валют (курси валют – константи у скрипті)
+						</p>
+					</div>
+					<div class="task__course course">
+						<div class="course__input-num">
+							<label for="grn">Сума в гривнях ₴:</label>
+							<input type="number" id="grn" value="0">
+						</div>
+						<button type="button" class="course__button"  onclick="makeConversion()">Конвертувати</button>
+						<ul class="course__result-items result-items">
+							<li class="result-items__item">Долар$:<span id="res-dollars">0.00$</span></li>
+							<li class="result-items__item">Євро€:<span id="res-euros">0.00€</span></li>
+						</ul>
+					</div>
+					<script src="js/task_02.js"></script>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<a class="footer__link" href="../index.html">Урок №18. DOM, BOM, Document. Події - початок</a>
+			<a class="footer__link" href="../../index.html">На головну сторінку</a>
+		</footer>
+	</div>
+
+</body>
+
+</html>

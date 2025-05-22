@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/task.css">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<title>Task 6</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" id="header">
+			<div class="header__container">
+				<div class="header__logo">
+					<img src="img/js-logo.jpg" alt="логотип компанії JavaScript" class="header__img">
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__task task">
+				<div class="task__container">
+					<h1 class="task__title">
+						Задача №6
+					</h1>
+					<div class="task__text">
+						<p>Користувач задає кількість оцінок і натискає на кнопку «get table». В результаті формується таблиця з input, куди
+						користувач вводить оцінки. Після цього натискає на кнопку “get sum” і знаходить середнє значення.
+						</p>
+					</div>
+					<div class="task__calculate-average">
+						<label for="count">Кількість оцінок:
+							<input type="number" id="count" min="1">
+						</label>
+						<button class="task__button" id="button-table">get table</button>
+						<div class="task__table-box"></div>
+						<button class="task__button" id="button-sum">get sum</button>
+						<strong id="result"></strong>
+					</div>
+					<script src="js/task_06.js"></script>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<a class="footer__link" href="../index.html">Урок №18. DOM, BOM, Document. Події - початок</a>
+			<a class="footer__link" href="../../index.html">На головну сторінку</a>
+		</footer>
+	</div>
+
+</body>
+
+</html>

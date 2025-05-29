@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<title>Lesson 19</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" id="header">
+			<div class="header__container">
+				<div class="header__logo">
+					<img src="img/js-logo.jpg" alt="логотип компанії JavaScript" class="header__img">
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__practice practice">
+				<div class="practice__container">
+					<h1 class="practice__title">
+						Урок №19. DOM, BOM, Document. Події
+					</h1>
+
+					<!-- Приклад 1 -->
+					<!-- 				<div>                
+						<button>1</button> 
+					</div>
+					<div>
+						<span>Hello</span>
+					</div>
+					<div>
+						<button>2</button>
+					</div>
+
+					<strong id="operation">Select</strong> -->
+
+					<!-- Приклад 2 -->
+					<!-- 				<div class="practice__div">
+						<button>1</button>
+					</div>
+					<div class="practice__div">
+						<span>Hello</span>
+					</div>
+					<div class="practice__div">
+						<button>2</button>
+					</div>
+
+					<strong id="operation">Select</strong> -->
+
+					<!-- Приклад 3 -->
+
+					<!-- <div class="practice__div">
+						<button>1</button>
+						<button><span>2</span></button>
+						<button>3</button>
+						<button>4</button>
+						<button>5</button>
+						<button>6</button>
+						<button id="testRed">7</button>
+						<button>8</button>
+						<div>
+							<div>Ok</div>
+						</div>
+					</div>
+
+					<strong id="operation">Select</strong>  -->
+
+					<!-- Приклад 4 -->
+					<!-- Однорядковий сапер -->
+					<!-- <table class="practice__table">
+						<tr>
+							<td mine="1"></td>
+							<td mine="0"></td>
+							<td mine="1"></td>
+							<td mine="0"></td>
+							<td mine="0"></td>
+							<td mine="0"></td>
+							<td mine="0"></td>
+							<td mine="0"></td>
+							<td mine="1"></td>
+						</tr>
+					</table> -->
+
+					<!-- Приклад 5 -->
+					<!-- <div class="practice__section section">
+						<h1 class="practice__title">General title</h1>
+						<div class="section">
+							<div>
+								<h1>Title 1</h1>
+								<p>
+									some text some text some text <strong>Click me</strong> some text
+									some text
+								</p>
+							</div>
+						</div>
+						<div class="section">
+							<div>
+								<h1>Title 2</h1>
+								<p>some text some text some text some text some text</p>
+							</div>
+						</div>
+					</div>
+					
+					<strong id="operation">Select</strong> -->
+
+					<!-- Приклад 6 -->
+					<!-- <div class="practice__div">
+						<h1>Додати задачу</h1>
+						<div>
+							<div>
+								<label>
+									Назва задачі
+									<input type="text" id="taskTitle" />
+								</label>
+							</div>
+							<div>
+								<label>
+									Пріоритетність задачі
+									<input type="number" id="taskPriority" />
+								</label>
+							</div>
+						</div>
+						<button id="addButton">Зберегти задачу</button>
+					</div>
+					<hr />
+					<div id="tasksContainer"></div> -->
+
+					<!-- Приклад 7 -->
+					<!-- <button id="btn">Test</button> -->
+
+					<!-- Приклад 8 -->
+					<!-- <canvas id="ccc" style="border: solid 2px;"></canvas> -->
+
+					<!-- Приклад 9 -->
+					<!-- <input type="button" id="myButton" value="press" onclick="myHandler(this)"> -->
+
+					<!-- Приклад 10 -->
+					<!-- <div class="practice__div">Кількість кліків= <span id="click_num"></span></div>
+					<button id="btn1" onclick="alert('1')">btn1</button>
+					<button id="btn2" onclick="alert('2')">btn2</button>
+					<input type="text" onclick="alert('3')">
+					<a href="https://www.ukr.net">НОВИНИ</a>
+					<a href="https://www.ukr.net">НОВИНИ</a>
+					<a href="https://www.ukr.net">НОВИНИ</a>
+					<a href="https://www.ukr.net">НОВИНИ</a>
+
+					<div class="practice__div">TEXT 1</div> -->
+
+					<!-- Приклад 11 -->
+					<!-- <div onclick="alert('body')">
+						<form onclick="alert('form')">
+							FORM
+							<div onclick="alert('div')">
+								DIV
+								<p id="myP">P</p>
+							</div>
+						</form>
+					</div> -->
+
+					<!-- Приклад 12 -->
+					<!-- <div class="practice__div">Calculator screen
+						<input type="text" id="screen" readonly value="">
+					</div>
+					<div class="practice__div" id="buttonsContainer">
+						<div>
+							<button class="practice__calc-button">1</button><button class="practice__calc-button">2</button><button class="practice__calc-button">3</button>
+						</div>
+						<div>
+							<button class="practice__calc-button">4</button><button class="practice__calc-button">5</button><button class="practice__calc-button">6</button>
+						</div>
+						<div>
+							<button class="practice__calc-button">7</button><button class="practice__calc-button">8</button><button class="practice__calc-button">9</button>
+						</div>
+						<div>
+							<button class="practice__calc-button">0</button>
+						</div>
+					</div> -->
+
+					<!-- Приклад 13 -->
+					<!-- <div class="practice__div" id="divv">
+						<input type="button" id="btn" name="name" value="">
+					 </div> -->
+
+					<!-- Приклад 14 функції -->
+					<!-- <div class="practice__div">
+						<div>Кількість вільних велосипедів: <span id="bicycle__count">0</span></div>
+						<h1>Члени клубу велосипедистів:</h1>
+						<div id="members__container">
+
+						</div>
+					</div> -->
+					<!-- Приклад 14 клас  -->
+					<!-- <div class="manager-selector"></div> -->
+
+							<ul class="practice__tasks-list tasks-list">
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task1/task1.html"
+								class="task__link">
+								<h2 class="task__title">Задача №1</h2>
+								<div class="task__question">
+									<p>Дано 10 рядків тексту «Hello!» у окремих div. При кліку на якийсь із них усі наступні
+										повинні бути зафарбовані у
+										червоний колір.
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task2/task2.html"
+								class="task__link">
+								<h2 class="task__title">Задача №2 <span>На перевірку</span></h2>
+								<div class="task__question">
+									<p>Дано 5 елементів input. При введенні значення у якийсь із них необхідно автоматично заповнювати
+									інші &lpar;усі попередні у
+									спадному порядку &lpar;кожен попередній має значення на 1 менше за наступний&rpar;, усі наступні на
+									1 більше &lpar;кожен наступний на 1 більше за попереднього&rpar;
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task3/task3.html"
+								class="task__link">
+								<h2 class="task__title">Задача №3 <span>На перевірку</span></h2>
+								<div class="task__question">
+									<p>Дано 5 випадковим чином згенерованих нумерованих списків з рандомними числами (кількість
+										елементів у списку випадкова
+										від 1 до 10, елементи випадкові – від 1 до 100). При натисненні на кнопку нумеровані
+										списки з парною кількістю елементів
+										зафарбувати у зелений колір, інші у червоний.
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task4/task4.html"
+								class="task__link">
+								<h2 class="task__title">Задача №4 <span>На перевірку</span></h2>
+								<div class="task__question">
+									<p>Дано 3 таблиці розмірності 3*3 з випадковими числами. Якщо відбувається клік на якійсь із
+										клітинок, то до відповідної
+										таблиці додається червона рамка (спробуйте додати можливість відображення кількості кліків
+										біля назви таблиці з
+										використанням відповідно доданого для цього атрибута).
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task5/task5.html"
+								class="task__link">
+								<h2 class="task__title">Задача №5</h2>
+								<div class="task__question">
+									<p>Відображаємо картки товарів, які користувач може вибирати. Вибраний товар має зелену рамку
+										(при кліку робити toogle з
+										класом вибраного елемента)
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task6/task6.html"
+								class="task__link">
+								<h2 class="task__title">Задача №6 <span>На перевірку</span></h2>
+								<div class="task__question">
+									<p>Дано список спортсменів. Потрібно сформувати список тих, які будуть брати участь у
+										змаганні. При цьому є два стовпці. В одному відображені всі спортсмени, в іншому – список
+										тих, хто був вибраний. При натисканні на зелену стрілку спортсмен
+										переміщається у список для змагань. При натисканні на червону стрілку спортсмен
+										переміщається у загальний список.
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task7/task7.html"
+								class="task__link">
+								<h2 class="task__title">Задача №7 <span>На перевірку</span></h2>
+								<div class="task__question">
+									<p> Відобразити падаючий сніг. Сніжинка з’являється у верхній частині екрану (top =0) і з
+										випадковою швидкістю
+										рухається вниз (у setInterval викликати метод, у якому додавати крок до top). Як тільки
+										сніжинка досягає нижньої частини
+										екрану (top>maxTop) вона знову повинна з’явитись у верхній частині екрану (top=0).
+									</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+					</div>
+
+					<script src="js/lesson19.js"></script>
+
+			</section>
+
+		</main>
+		<footer class="footer">
+			<a class="footer__link" href="../index.html" target="_blank">На головну сторінку</a>
+		</footer>
+
+	</div>
+
+</body>
+
+</html>

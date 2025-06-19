@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/task.css">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<title>Task 1</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" id="header">
+			<div class="header__container">
+				<div class="header__logo">
+					<img src="img/js-logo.jpg" alt="логотип компанії JavaScript" class="header__img">
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__task task">
+				<div class="task__container">
+					<h1 class="task__title">
+						Задача №1
+					</h1>
+					<div class="task__text">
+						<p>Простий калькулятор для двох чисел. Кнопки для різних операцій:додавання, віднімання,
+						множення, ділення
+						</p>
+					</div>
+					<div class="task__calculator calculator">
+						<div class="calculator__input-num">
+							<label for="">
+								First number
+								<input type="number" id="firstNum">
+							</label>
+						</div>
+						<div class="calculator__input-num">
+							<label for="">
+								Second number
+								<input type="number" id="secondNum">
+							</label>
+						</div>
+						<div class="calculator__button-set" id="operationsContainer">
+							<button class="calculator__button" id="add">+</button>
+							<button class="calculator__button" id="sub">-</button>
+							<button class="calculator__button" id="mult">*</button>
+							<button class="calculator__button" id="div">/</button>
+							<button class="calculator__button" id="reminder">%</button>
+						</div>
+						<div class="calculator__res">Результат: <span id="res"></span></div>
+					</div>
+
+					<script src="js/task_01.js"></script>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<a class="footer__link" href="../practice.html">Урок №20. Практика(DOM, BOM, Document. Події)</a>
+			<a class="footer__link" href="../../index.html">На головну сторінку</a>
+		</footer>
+	</div>
+
+</body>
+
+</html>

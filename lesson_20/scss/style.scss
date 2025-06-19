@@ -1,0 +1,440 @@
+@use "sass:math";
+
+@import "_fonts.scss";
+
+@import url("https://fonts.googleapis.com/css?family=Anonymous+Pro:regular,italic,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:regular,600&display=swap");
+
+@import "_reset.scss";
+
+@import "_mixins.scss";
+
+// Налаштування адаптивної сітки ===============================================================================================================================================================================================================================================================================================
+// Мінімальна ширина сторінки
+$minWidth: 393;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1200;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// ==========================================================
+
+body {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+	width: 100%;
+	line-height: 1.5;
+	color: #000;
+	background-color: #f3e14f;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+}
+
+.wrapper > main {
+	flex-grow: 1;
+}
+
+[class*="__container"] {
+	max-inline-size: toRem(1230);
+	padding-inline: toRem(15);
+	margin-inline: auto;
+}
+
+button,
+label {
+	cursor: pointer;
+}
+
+$color-white: #fff;
+$color-dark: #1e2832;
+$color-black: #000;
+$color-red: #ff0000;
+
+//bg
+$bgcolor-yellow: #f3e14f;
+$bgcolor-white: #fff;
+$bgcolor-dark: #333;
+$bgcolor-red: #ff0000;
+
+@media (any-hover: hover) {
+	.footer__link:hover,
+	.header__nav-link:hover,
+	.task__link:hover .task__title,
+	.task__link:hover .task__title span {
+		color: #ff4500;
+	}
+}
+
+/* -------------header---------------------- */
+
+.header {
+	// position: fixed;
+	top: 0;
+	left: 0;
+
+	z-index: 50;
+	width: 100%;
+
+	//.header__container
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		padding-block-start: toRem(20);
+		padding-block-end: toRem(20);
+		align-items: center;
+		justify-content: space-between;
+		gap: toRem(20);
+	}
+
+	//.header__logo
+	&__logo {
+		flex: 0 0 toRem(200);
+		overflow: hidden;
+		cursor: pointer;
+
+		@media (min-width: toEm(720.98)) {
+			flex: 0 0 toRem(300);
+		}
+
+		img {
+			aspect-ratio: 300/100;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+}
+
+/* ---------page------------ */
+
+.main {
+	flex-grow: 1;
+}
+
+.page {
+	//.page__practice
+	&__practice {
+		padding-block: toRem(30);
+	}
+}
+
+.practice {
+	//.practice__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: toRem(5);
+	}
+	//.practice__div
+	&__div {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(10);
+		width: toRem(300);
+		padding: toRem(10);
+		margin: toRem(5);
+		border: toRem(4) solid #937777;
+		border-radius: toRem(8);
+
+		& label {
+			display: block;
+			margin-block-end: toRem(10);
+			font-weight: 600;
+		}
+
+		& input {
+			width: 100%;
+			padding: toRem(8);
+			margin-block-start: toRem(5);
+			border: toRem(1) solid #aaa;
+			border-radius: toRem(4);
+		}
+	}
+
+	#buttonsContainer > div {
+		display: flex;
+		justify-content: center;
+	}
+
+	#members__container {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(10);
+	}
+
+	.memberItem {
+		display: flex;
+		align-items: center;
+		gap: toRem(10);
+		span {
+			margin-inline-end: auto;
+		}
+	}
+
+	// .practice__calc-button
+	&__calc-button {
+		width: toRem(100);
+		height: toRem(50);
+		margin: toRem(5);
+		padding: toRem(5);
+		font-size: toRem(20);
+		background-color: #f0f0f0;
+		border: toRem(2) solid #744040;
+		border-radius: toRem(8);
+		transition:
+			background-color 0.3s,
+			transform 0.2s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #e0e0e0;
+			}
+		}
+
+		&:active {
+			background-color: #d0d0d0;
+			transform: scale(0.95);
+		}
+	}
+
+	.taskItem {
+		display: flex;
+		justify-content: space-between;
+		width: toRem(300);
+		border: 2px solid #282020;
+		margin: toRem(20);
+	}
+
+	// .practice__table
+	&__table {
+		// width: toRem(300);
+		font-size: toRem(10);
+		border: 2px solid #282020;
+		background-color: #7c7171;
+
+		border-collapse: separate;
+		border-spacing: toRem(10);
+		// text-align: center;
+		thead > tr {
+			background-color: #282020;
+		}
+
+		// th,
+		td {
+			width: toRem(30);
+			height: toRem(30);
+			border: 2px solid #8c0202;
+			padding: toRem(3);
+			background-color: #a0a0a0;
+		}
+	}
+
+	//.practice__title
+	&__title {
+		font-size: toRem(26);
+		font-weight: 600;
+		text-align: center;
+		line-height: 1.2;
+		margin-block-end: toRem(20);
+
+		@media (min-width: toEm(720.98)) {
+			font-size: toRem(40);
+		}
+	}
+
+	// .practice__tasks-list
+	&__tasks-list {
+	}
+
+	.tasks-list {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(toRem(280), 1fr));
+		gap: toRem(20);
+		@media (max-width: toEm(749.98)) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: toEm(640.98)) {
+			grid-template-columns: auto;
+		}
+		// .tasks-list__task
+		&__task {
+			display: grid;
+			height: toRem(250);
+			overflow: hidden;
+			padding: toRem(10);
+			border-radius: toRem(10);
+			border: solid #fff toRem(2);
+			transition: all 0.2s;
+			@media (max-width: toEm(749.98)) {
+				height: toRem(200);
+			}
+		}
+		@media (any-hover: hover) {
+			&__task:hover {
+				box-shadow:
+					inset 0 -3em 3em rgba(243, 191, 3, 0.918),
+					0 0 0 2px white,
+					0.3em 0.3em 1em rgba(221, 132, 132, 0.6);
+				// background-color: #55565e;
+			}
+		}
+	}
+	.task {
+		// .task__link
+		&__link {
+		}
+
+		// .task__title
+		&__title {
+			transition: color 0.3s;
+
+			@media (min-width: toEm(720.98)) {
+				font-size: toRem(22);
+			}
+			color: #4ff3d2;
+			font-size: toRem(20);
+		}
+		&__title span {
+			font-size: toRem(16);
+			color: #de6f06;
+		}
+
+		// .task__question
+		&__question {
+			max-height: toRem(250);
+			overflow: hidden;
+			font-style: italic;
+		}
+		// .task__table
+		// &__table {
+		// 	width: toRem(260);
+		// 	border: 1px solid #8c8c8c;
+		// 	font-size: toRem(10);
+		// 	// text-align: center;
+		// }
+
+		// thead > tr {
+		// 	background-color: #d1873d;
+		// }
+
+		// th,
+		// td {
+		// 	border: 1px solid #a0a0a0;
+		// 	padding: toRem(3);
+		// }
+	}
+}
+
+.manager-selector {
+	display: flex;
+	flex-direction: column;
+	gap: toRem(10);
+	width: toRem(300);
+	padding: toRem(10);
+	margin: toRem(5);
+	border: toRem(4) solid #937777;
+	border-radius: toRem(8);
+	h1 {
+		color: #801909;
+		font-size: toRem(24);
+		text-align: center;
+	}
+	& > div:first-child {
+		font-weight: 600;
+		margin-block-end: toRem(15);
+		font-size: toRem(24);
+	}
+	span {
+		margin-inline-start: toRem(10);
+		color: #801909;
+		font-weight: 600;
+	}
+}
+.members-list {
+	display: flex;
+	flex-direction: column;
+	gap: toRem(10);
+}
+.member-item {
+	border: toRem(4) solid #937777;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: toRem(10);
+	padding: toRem(10);
+	& > div:first-child {
+		font-weight: 600;
+		margin-block-end: toRem(15);
+		font-size: toRem(18);
+	}
+	.memberBtns {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(5);
+	}
+	& button {
+		width: toRem(100);
+		height: toRem(50);
+		margin: toRem(5);
+		padding: toRem(5);
+		font-size: toRem(20);
+		background-color: #f0f0f0;
+		border: toRem(2) solid #744040;
+		border-radius: toRem(8);
+		transition:
+			background-color 0.3s,
+			transform 0.2s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #ceb9b9;
+			}
+		}
+
+		&:active {
+			background-color: #d0d0d0;
+			transform: scale(0.95);
+		}
+	}
+}
+.task,
+.footer,
+.header {
+	background-color: $bgcolor-dark;
+	color: $color-white;
+}
+
+/* ----------------footer-------------------------- */
+
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	inline-size: 100%;
+	padding: toRem(30) toRem(10);
+
+	//.footer__link
+	&__link {
+		font-weight: 600;
+		line-height: 1.2;
+		font-size: toEm(20);
+		font-style: italic;
+		transition: color 0.3s;
+	}
+}
+
+// ==================================================

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<title>Lesson 21</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" id="header">
+			<div class="header__container">
+				<div class="header__logo">
+					<img src="img/js-logo.jpg" alt="логотип компанії JavaScript" class="header__img">
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__practice practice">
+				<div class="practice__container">
+					<h1 class="practice__title">
+						Урок №21. Успадкування. Обробка виключних ситуацій. Використання типу Date
+					</h1>
+					<script src="js/lesson15.js"></script>
+					<ul class="practice__tasks-list tasks-list">
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task0/task0.html"
+								class="task__link">
+								<h2 class="task__title">Задача №0</h2>
+								<div class="task__question">
+									<p> Розробити клас Person (поля:ім'я, вік, адреса; методи: toString, визначення року
+										народження). На основі класу Person
+										розробити клас Worker (додати поля: посада, розмір заробітної плати, кількість відсотів
+										оподаткування; методи:визначення
+										кількості виплачених коштів за рік, та визначення розміру податків)
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task1/task1.html"
+								class="task__link">
+								<h2 class="task__title">Задача №1</h2>
+								<div class="task__question">
+									<p>Створити клас Client
+									</p>
+									<table class="task__table">
+										<tr>
+											<td>Поля(властивості)</td>
+											<td>ID <br>ПІБ <br>Кількість грошей на рахунку </td>
+										</tr>
+										<tr>
+											<td>Методи (дії)</td>
+											<td>Додавання грошей <br>Зняття грошей <br>ToString
+											</td>
+										</tr>
+									</table>
+									<p>На основі цього класу створити клас GoldenClient
+									</p>
+									<table class="task__table">
+										<tr>
+											<td>Поля(властивості)</td>
+											<td>ID<br>ПІБ <br>Кількість грошей на рахунку <br>Ліміт кредитних коштів <br>Відсоток
+												за використання кредитних
+												коштів</td>
+										</tr>
+										<tr>
+											<td>Методи (дії)</td>
+											<td>Додавання грошей<br>Зняття грошей <br>Визначення пені за використання кредитних
+												коштів <br>ToString
+											</td>
+										</tr>
+									</table>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task2/task2.html"
+								class="task__link">
+								<h2 class="task__title">Задача №2</h2>
+								<div class="task__question">
+									<p>Створити клас Bank, у якому зберігається масив клієнтів. Виконати такі операції:
+									</p>
+									<ol>
+										<li>Вивести всіх простих клієнтів;</li>
+										<li>Вивести всіх клієнтів GoldenClient;</li>
+										<li>Знайти сумарну кількість грошей на рахунку;</li>
+									</ol>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task3/task3.html"
+								class="task__link">
+								<h2 class="task__title">Задача №3</h2>
+								<div class="task__question">
+									<p> Розробити Класи
+									</p>
+									<table class="task__table">
+										<tr>
+											<th>House</th>
+											<th>Dog</th>
+											<th>Bird</th>
+										</tr>
+										<tr>
+											<td>
+												<p><strong>--- властивості ---</strong></p>
+												<ol>
+													<li>Координата Х</li>
+													<li>Координата У</li>
+													<li>шлях до зображення</li>
+													<li>інтервал оновлення</li>
+												</ol>
+												<p><strong>--- методи ---</strong></p>
+												<ol>
+													<li>генерування елемента розмітки</li>
+													<li>оновлення через вказаний інтервал (збільшення або зменшення масштабу (об’єкт
+														не рухається)</li>
+												</ol>
+											</td>
+											<td>
+												<p><strong>--- властивості ---</strong></p>
+												<ol>
+													<li>Координата Х</li>
+													<li>Координата У</li>
+													<li>шлях до зображення</li>
+													<li>інтервал оновлення</li>
+												</ol>
+												<p><strong>--- методи ---</strong></p>
+												<ol>
+													<li>генерування елемента розмітки</li>
+													<li>оновлення через вказаний інтервал (випадкове зміщення по горизонталі (зміна
+														координати Х))
+													</li>
+												</ol>
+											</td>
+											<td>
+												<p><strong>--- властивості ---</strong></p>
+												<ol>
+													<li>Координата Х</li>
+													<li>Координата У</li>
+													<li>шлях до зображення</li>
+													<li>інтервал оновлення</li>
+												</ol>
+												<p><strong>--- методи ---</strong></p>
+												<ol>
+													<li>генерування елемента розмітки</li>
+													<li>оновлення через вказаний інтервал (випадкове переміщення у довільному
+														напрямку)
+													</li>
+												</ol>
+											</td>
+										</tr>
+									</table>
+									<p>Подумайте яким має бути спільний клас предок.</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task4/task4.html"
+								class="task__link">
+								<h2 class="task__title">Задача №4</h2>
+								<div class="task__question">
+									<p>Користувач задає місяць навчання учня (перевіряти чи є числом, чи від 1 до 12, чи не
+										канікули) та оцінку (перевіряти чи
+										є числом, чи від 1 до 100). Вивести чи зможе він виправити оцінку (якщо оцінка погана і це
+										не останній місяць у
+										семестрі) . Обробку усіх помилок зробити з використанням відповідних класів.
+									</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<a class="footer__link" href="../index.html" target="_blank">На головну сторінку</a>
+		</footer>
+
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<title>Lesson 23</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" id="header">
+			<div class="header__container">
+				<div class="header__logo">
+					<img src="img/js-logo.jpg" alt="логотип компанії JavaScript" class="header__img">
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__practice practice">
+				<div class="practice__container">
+					<h1 class="practice__title">
+						Урок №23. Regexp. localStorage
+					</h1>
+					<script src="js/lesson23.js"></script>
+					<ul class="practice__tasks-list tasks-list">
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task1/task1.html"
+								class="task__link">
+								<h2 class="task__title">Задачі regular expressions</h2>
+								<div class="task__question">
+									<table class="task__table">
+										<tr>
+											<td>1. Дано масив рядків. Вивести ті, у яких є цифри (використати метод test та
+												регулярні вирази).<br>2. Дано масив рядків. Вивести ті, у яких немає цифр.<br>3.
+												Дано масив рядків. Вивести ті, у яких є голосні літери.<br>4. Дано масив рядків.
+												Вивести ті, у яких немає голосних літер.</td>
+											<td>5. Дано масив рядків. Вивести ті, у яких є або цифра 1 або цифра 3. <br>6. Дано
+												рядок тексту, вивести усі числа, які є у тексті. <br>7. Дано рядок тексту. Знайти
+												усі знаки пунктуації, які були використано.<br>8. Дано рядок тексту. Вивести усі
+												складові, які розділені розділовими знаками.
+											</td>
+										</tr>
+										<tr>
+											<td>9. Дано рядок тексту. Перевірити, чи містить він дату у форматі dd.mm.yyyy (dd-
+												день, mm- місяць, yyyy- рік).<br>10. Дано рядок тексту. Підрахувати кількість
+												двоцифрових чисел у рядку.<br>11. Визначити чи може бути рядок тексту номером
+												банківської картки (приклад: «4142-3433-2323-3434»). Знайти усі такі
+												номери.
+												<br>12. Дано адресу сайту. Визначити, чи є він урядовим (містить домен “gov”)
+											</td>
+											<td>13. Вибрати усі роки після 2021 року з отриманого повідомлення
+												<br>14. Дано номер телефону. Перевірити, чи є цей телефон телефоном з України
+												(починаєтсья на «+38»)
+												<br>15. Користувач вводить прізвище та ім’я в одному рядку через пробіл. Замінити
+												пробіл на дефіс.
+												<br>16. Користувач вводить дату у форматі «день.місяць.рік». Отримати рядкове
+												представлення дати у форматі «день/місяць/рік»<br>17. Користувач вводить день (номер
+												дня (0-6) або «sun,mon,tue,wed,thu,fri,sat»). Визначити, чи є це день вихідним
+											</td>
+										</tr>
+									</table>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task2/task2.html"
+								class="task__link">
+								<h2 class="task__title">Задача №18(localStorage)</h2>
+								<div class="task__question">
+									<p>Користувач може змінювати колір фону, що вибирає користувач з використанням
+										<code>&lt;input type="color"&gt;</code>.
+										Зберігати цей колір і відновлювати при наступному відкритті. Також зберігати і відображати
+										кількість змін протягом
+										одного сеансу.
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task3/task3.html"
+								class="task__link">
+								<h2 class="task__title">Задача №19(localStorage)</h2>
+								<div class="task__question">
+									<p>Зберігати у пам’яті список справ, які користувачу треба виконати (зберігати у
+										localStorage). Періодично випадковим чином
+										вибирати якусь з справ і виводити користувачу (з використанням confirm). Якщо користувач
+										натискає на «Ок», то видаляти
+										цю задачу.
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="tasks-list__task task">
+							<a target="_blank" title="На сторінку розв'язування задачі" href="task4/task4.html"
+								class="task__link">
+								<h2 class="task__title">Date</h2>
+								<div class="task__question">
+									<table class="task__table">
+										<tr>
+											<td>1. Визначити привітання у залежності від часу доби (Доброго дня, Доброго ранку,
+												Доброго вечора)
+												<br>2. Вивести дату у форматі “місяць – рік – вихідний/робочий”<br>3.Визначити
+												поточну пору року
+											</td>
+											<td>4. Вивести назву дня<br>5. Користувач вводить дату народження. Визначити, скільки
+												йому повних років. <br>6.Користувач іде у відпустку на 56 днів. Визначити дату на
+												момент його повернення.
+											</td>
+										</tr>
+										<tr>
+											<td> 7. Користувач бере авто на вказану кількість годин. Визначити кінцевий час
+												повернення.<br>8. Задаємо користувачу задачу з додавання двох чисел. Визначити
+												скільки секунд було використано для розв’язання задачі.
+											</td>
+											<td>9. Дано дата виробництва йогурта (вводимо рік, місяць, день) та кількість днів
+												придатності. Визначити чи є він придатним на
+												даний момент.
+												<br>10. Сформувати масив з 1000 елементів від 1 до 800. Порівняти час сортування
+												бульбашкою і вставкою.
+											</td>
+										</tr>
+									</table>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<a class="footer__link" href="../index.html" target="_blank">На головну сторінку</a>
+			<a class="footer__link" href="https://www.npmjs.com/package/moment" target="_blank">Moment.js</a>
+			<a class="footer__link" href="https://www.npmjs.com/package/uuid" target="_blank">uuid</a>
+			<a class="footer__link" href="https://en.wikipedia.org/wiki/List_of_Unicode_characters" target="_blank">List of
+				Unicode characters</a>
+			<a class="footer__link" href="https://regex101.com/" target="_blank">regular expressions</a>
+
+
+		</footer>
+
+	</div>
+
+</body>
+
+</html>

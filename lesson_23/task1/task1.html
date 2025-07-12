@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/task.css">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<title>Задачі regular expressions</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" id="header">
+			<div class="header__container">
+				<div class="header__logo">
+					<img src="img/js-logo.jpg" alt="логотип компанії JavaScript" class="header__img">
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__task task">
+				<div class="task__container">
+					<h1 class="task__title">
+						Задачі regular expressions
+					</h1>
+					<div class="task__text">
+						<ul class="task__list list">
+							<li class="list__item">
+								<p><strong>Задача 1.</strong> Дано масив рядків. Вивести ті, у яких є цифри (використати метод
+									<code>test</code> та
+									регулярні вирази).
+								</p>
+								<details>
+									<summary>Переглянути код</summary>
+									<pre><code>const withDigits = strings.filter(str => /\d/.test(str));<br>console.log("1.З цифрами:", withDigits);</code>
+										</pre>
+								</details>
+							</li>
+							<li class="list__item">
+								<p><strong>Задача 2.</strong> Дано масив рядків. Вивести ті, у яких немає цифр.
+								</p>
+								<details>
+									<summary>Переглянути код</summary>
+									<pre><code>const withoutDigits = strings.filter(str => !/\d/.test(str));<br>console.log("2. Без цифр:", withoutDigits);</code></pre>
+								</details>
+							</li>
+							<li class="list__item">
+								<p><strong>Задача 3.</strong> Дано масив рядків. Вивести ті, у яких є голосні літери.
+								</p>
+								<details>
+									<summary>Переглянути код</summary>
+									<pre><code>const withVowels = strings.filter(str => /[аеєиіоуюяaeiou]/i.test(str));<br>console.log("3. Є голосні літери:", withVowels);</code></pre>
+								</details>
+							</li>
+							<li class="list__item">
+								<p><strong>Задача 4.</strong> Дано масив рядків. Вивести ті, у яких немає голосних літер.
+								</p>
+								<details>
+									<summary>Переглянути код</summary>
+									<pre><code>const withoutVowels = strings.filter(str=> !/[аеєиіоуюяaeiou]/i.test(str));<br>console.log("4. Немає голосних літер:", withoutVowels);</code></pre>
+								</details>
+							</li>
+							<li class="list__item">
+								<p><strong>Задача 5.</strong> Дано масив рядків. Вивести ті, у яких є або цифра 1 або цифра 3.
+								</p>
+								<details>
+									<summary>Переглянути код</summary>
+									<pre><code>const with1or3= strings.filter(str => /[13]/.test(str))<br>console.log("5. Є або цифра 1 або цифра 3:", with1or3);</code></pre>
+								</details>
+							</li>
+							<li class="list__item">
+								<p><strong>Задача 6.</strong> Дано рядок тексту, вивести усі числа, які є у тексті.
+								</p>
+								<details>
+									<summary>Переглянути код</summary>
+									<pre><code>const numbersInText = text.match(/\d+/g);<br>console.log("6.Усі числа, які є у тексті:", numbersInText);</code></pre>
+								</details>
+							</li>
+							<li class="list__item">
+								<p><strong>Задача 7.</strong> Дано рядок тексту. Знайти усі знаки пунктуації, які були
+									використано.
+								</p>
+								<details>
+									<summary>Переглянути код</summary>
+									<pre><code>const punctuationMarks = text.match(/[.,!?;:\-_’()'"`]/g);<br>console.log("7.Усі знаки пунктуації, які були використано:", punctuationMarks);</code></pre>
+								</details>
+							</li>
+							<li class="list__item">
+								<p><strong>Задача 8.</strong> Дано рядок тексту. Вивести усі складові, які розділені розділовими
+									знаками.
+								</p>
+								<details>
+									<summary>Переглянути код</summary>
+									<pre><code>const separatedComponentsByPM = text.match(/[^.,!?;:()-\s]+/g);<br>console.log("8.Усі складові, які розділені розділовими знаками:",separatedComponentsByPM);</code></pre>
+								</details>
+							</li>
+							<li class="list__item">
+								<p><strong>Задача 9.</strong> Дано рядок тексту. Перевірити, чи містить він дату у форматі
+									dd.mm.yyyy (dd- день, mm- місяць, yyyy- рік).
+								</p>
+								<details>
+									<summary>Переглянути код</summary>
+									<pre><code>const dateInFormat = /\b\d{2}\.\d{2}\.\d{4}\b/.test(text);<br>const result9 = dateInFormat ? "Містить дату у форматі dd.mm.yyyy" : "Не містить дату у форматі dd.mm.yyyy";<br>console.log("9.Дата у форматі dd.mm.yyyy:", result9);</code></pre>
+								</details>
+							</li>
+							<li class="list__item">
+								<p><strong>Задача 10.</strong> Дано рядок тексту. Підрахувати кількість двоцифрових чисел у
+									рядку.
+								</p>
+								<details>
+									<summary>Переглянути код</summary>
+									<pre><code>const twoDigitalNumbers = text.match(/\b\d{2}\b/g);<br>if (twoDigitalNumbers) {<br>const twoDigitalNumbersCount = twoDigitalNumbers ? twoDigitalNumbers.length : 0;<br>console.log("10.Кількість двоцифрових чисел у рядку:",             twoDigitalNumbersCount)}</code></pre>
+								</details>
+							</li>
+							<li class="list__item">
+								<p><strong>Задача 11.</strong> Визначити чи може бути рядок тексту номером банківської картки
+									(приклад: «4142-3433-2323-3434»). Знайти усі такі номери.
+								</p>
+								<details>
+									<summary>Переглянути код</summary>
+									<pre><code>const a = "myFirstCard:4142-3433-2323-3434 vkvjljl someNumber:35864564 number:5478-8975-3233
+									mySecondCard:1234-1234-1234-1234";<br>const card = a.match(/\b\d{4}-\d{4}-\d{4}-\d{4}\b/g);<br>console.log("11.Номер банківської картки:", card);</code></pre>
+								</details>
+							</li>
+							<li class="list__item">
+								<p><strong>Задача 12.</strong> Дано адресу сайту. Визначити, чи є він урядовим (містить домен
+									“gov”)
+								</p>
+								<details>
+									<summary>Переглянути код</summary>
+									<pre><code>const webSites = [<br>"https://dkcjkcj.gov.ua",<br>"https://dkcjkcj.egov.ua",<br>"https://dkcjkcj.egovw.ua",<br>"http://data.org.ua",<br>"http://data.gov.ua",<br>"https://dkcjkcj.gov.uk",<br>"https://dkcjkcj.gov",<br>];<br>const governmentWebsites = webSites.filter((url) => /\.gov(\.[a-z]{2,})?\b/i.test(url));<br>console.log("12.Урядові сайти:", governmentWebsites);</code></pre>
+								</details>
+							</li>
+							<li class="list__item">
+								<p><strong>Задача 13.</strong> Вибрати усі роки після 2021 року з отриманого повідомлення
+								</p>
+								<details>
+									<summary>Переглянути код</summary>
+									<pre><code>const message = "aaaa 2000 bbbbb 2024 ccccc 2030 vvv 2029 fff llkkll 2050 3000";<br>const yearsAfter2021=message.match(/20[3-9]\d|202[2-9]|2[1-9]\d\d|[3-9]\d\d\d/g)<br>console.log("13.Усі роки після 2021 року:", yearsAfter2021);</code></pre>
+								</details>
+							</li>
+							<li class="list__item">
+								<p><strong>Задача 14.</strong> Дано номер телефону. Перевірити, чи є цей телефон телефоном з
+									України (починаєтсья на «+38»)
+								</p>
+								<details>
+									<summary>Переглянути код</summary>
+									<pre><code>const phoneNumber = "+380506667788";<br>const isUa = (/^\+38/.test(phoneNumber) ? 'ua': 'Other')<br>console.log(`14.Номер:${phoneNumber}`, isUa);</code></pre>
+								</details>
+							</li>
+							<li class="list__item">
+								<p><strong>Задача 15.</strong> Користувач вводить прізвище та ім’я в одному рядку через пробіл.
+									Замінити пробіл на дефіс.
+								</p>
+								<details>
+									<summary>Переглянути код</summary>
+									<div>
+										<label for="fullname">Введіть прізвище та ім'я:
+											<input id="fullname" type="text">
+										</label>
+									</div>
+									<button id="formatBtn">Замінити</button>
+									<div>Результат:<span id="result"></span></div>
+									<pre><code>function replaceSpace() {<br>const input=document.getElementById('fullname').value.trim()<br>const whitespaceChange=input.replace(/\s+/g,'-')<br>document.getElementById("result").innerText = whitespaceChange;<br>console.log(`15.Замінити пробіл на дефіс: ${whitespaceChange}`);}<br>window.onload = function () {<br>const button=document.getElementById('formatBtn')<br>button.onclick=replaceSpace};</code></pre>
+								</details>
+							</li>
+							<li class="list__item">
+								<p><strong>Задача 16.</strong> Користувач вводить дату у форматі «день.місяць.рік». Отримати
+									рядкове представлення дати у форматі «день/місяць/рік»
+								</p>
+								<details>
+									<summary>Переглянути код</summary>
+									<div>
+										<label for="dateInput">Введіть дату (день.місяць.рік):
+											<input id="dateInput" type="text" placeholder="26.07.2025">
+										</label>
+									</div>
+									<button id="convertDateBtn">Замінити</button>
+									<div>Результат:<span id="dateResult"></span></div>
+									<pre><code>function convertDateFormat() {<br>const input = document.getElementById("dateInput").value.trim();<br>const formattedDate = input.replace(/\./g, "/");<br>document.getElementById("dateResult").innerText = formattedDate;<br>console.log(`16.Перетворення формату дати: ${formattedDate}`);}<br>window.onload = function () {<br>const button = document.getElementById("convertDateBtn");<br>button.onclick = convertDateFormat;};</code></pre>
+								</details>
+							</li>
+							<li class="list__item">
+								<p><strong>Задача 17.</strong> Користувач вводить день (номер дня (0-6) або «sun, mon, tue, wed, thu, fri, sat»). Визначити, чи є цей день вихідним
+								</p>
+								<details>
+									<summary>Переглянути код</summary>
+									<div>
+										<label for="dayInput">Введіть день (0-6 або назву англійською):
+											<input id="dayInput" type="text" placeholder="0 або sun">
+										</label>
+									</div>
+									<button id="checkDayBtn">Перевірити</button>
+									<div>Результат:<span id="dayResult"></span></div>
+									<pre><code>function checkIfWeekend() {<br>const input = document.getElementById("dayInput").value.trim().toLowerCase();<br>const resultEl =document.getElementById("dayResult")<br>const isValidInput = /^([0-6]|sun|mon|tue|wed|thu|fri|sat)$/.test(input)<br>if(!isValidInput){<br>resultEl.innerText="Невірне значення"<br>console.log(`Невірний ввід:${input}`)<br>	return<br>}<br>const isWeekend = /^(0|6|sun|sat)$/.test(input) ? "Вихідний" : "Не вихідний";<br>resultEl.innerText = isWeekend;<br>console.log(`17.Чи є цей день вихідним: день'${input}' ${isWeekend}`);}<br>window.onload = function () {<br>const button = document.getElementById("checkDayBtn");<br>button.onclick = checkIfWeekend;};</code></pre>
+								</details>
+							</li>
+						</ul>
+						<script src="js/task_01.js"></script>
+					</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<a class="footer__link" href="../index.html">Урок №23. Regexp. localStorage</a>
+			<a class="footer__link" href="../../index.html">На головну сторінку</a>
+		</footer>
+	</div>
+
+</body>
+
+</html>

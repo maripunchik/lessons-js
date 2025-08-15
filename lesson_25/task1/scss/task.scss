@@ -1,0 +1,341 @@
+@use "sass:math";
+
+@import "_fonts.scss";
+
+@import url("https://fonts.googleapis.com/css?family=Anonymous+Pro:regular,italic,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:regular,600&display=swap");
+
+@import "_reset.scss";
+
+@import "_mixins.scss";
+
+// Налаштування адаптивної сітки ===============================================================================================================================================================================================================================================================================================
+// Мінімальна ширина сторінки
+$minWidth: 393;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1200;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// ==========================================================
+
+body {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+	width: 100%;
+	line-height: 1.5;
+	color: #000;
+	background-color: #f3e14f;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+}
+
+.wrapper > main {
+	flex-grow: 1;
+}
+
+[class*="__container"] {
+	max-inline-size: toRem(1230);
+	padding-inline: toRem(15);
+	margin-inline: auto;
+}
+
+button,
+label {
+	cursor: pointer;
+}
+
+$color-white: #fff;
+$color-dark: #1e2832;
+$color-black: #000;
+$color-red: #ff0000;
+
+//bg
+$bgcolor-yellow: #f3e14f;
+$bgcolor-white: #fff;
+$bgcolor-dark: #333;
+$bgcolor-red: #ff0000;
+
+@media (any-hover: hover) {
+	.footer__link:hover,
+	.header__nav-link:hover {
+		color: #ff4500;
+	}
+}
+
+/* ----------header------------------ */
+
+.header {
+	// position: fixed;
+	top: 0;
+	left: 0;
+
+	z-index: 50;
+	width: 100%;
+
+	//.header__container
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		padding-block-start: toRem(20);
+		padding-block-end: toRem(20);
+		align-items: center;
+		justify-content: space-between;
+		gap: toRem(20);
+	}
+	//.header__logo
+	&__logo {
+		flex: 0 0 toRem(200);
+		overflow: hidden;
+		cursor: pointer;
+
+		@media (min-width: toEm(720.98)) {
+			flex: 0 0 toRem(300);
+		}
+
+		img {
+			aspect-ratio: 300/100;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+}
+
+/* ---------page------------ */
+
+.main {
+	flex-grow: 1;
+}
+
+.page {
+	padding-block: toRem(20);
+
+	//.page__task
+	&__task {
+	}
+}
+
+.task {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: toRem(5);
+
+	padding-inline: toRem(10);
+	padding-block: toRem(20);
+	border-radius: toRem(10);
+
+	//.task__container
+	&__container {
+		@include adaptiveValue("inline-size", 1200, 300);
+		display: flex;
+		flex-direction: column;
+		// justify-content: center;
+		// align-items: center;
+		gap: toRem(15);
+	}
+
+	//.task__title
+	&__title {
+		font-size: toRem(23);
+		font-weight: 600;
+		text-align: center;
+
+		@media (min-width: toEm(720.98)) {
+			font-size: toRem(35);
+		}
+	}
+	&__wrapper {
+
+	}
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	gap: toRem(20);
+	align-items: flex-start;
+
+	@media (max-width: toEm(768)) {
+		flex-direction: column;
+		align-items: center;
+	}
+	//.wrapper__list
+	&__list {
+		display: flex;
+		max-width: toRem(300);
+		flex-direction: column;
+	}
+
+	&__image-container {
+display: flex;
+flex-direction: column;
+gap: toRem(5);
+
+		img {
+					aspect-ratio: 1/1;
+		max-width: toRem(600);
+		flex-shrink: 0;
+		border: toRem(2) solid #1e2832;
+		border-radius: toRem(10);
+		overflow: hidden;
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			@media (max-width: toEm(480)) {
+			width: 100%;
+			max-width: toRem(300);
+			aspect-ratio: 4/3;
+		}
+		}
+
+		
+	}
+}
+
+.list__item {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: toRem(5);
+	height: 100%;
+	padding: toRem(10);
+	border-radius: toRem(10);
+	background-color: $bgcolor-white;
+	// color: $color-white;
+	transition:
+		border-color 0.3s,
+		box-shadow 0.3s,
+		background-color 0.3s;
+	@media (any-hover: hover) {
+		&:hover {
+			// border: toRem(3) solid #fc4300;
+			background-color: #b4998c;
+			box-shadow:
+				inset 0 -2em 2em rgba(243, 191, 3, 0.918),
+				0 0 0 2px white,
+				0.3em 0.3em 1em rgba(221, 132, 132, 0.6);
+		}
+	}
+	.footer__link:hover,
+	.header__nav-link:hover {
+		color: #ff4500;
+	}
+}
+
+details {
+	background-color: #f4f4f4;
+	padding: toRem(10);
+	border-radius: toRem(5);
+	border: toRem(1) solid #ccc;
+	font-family:
+		Anonymous Pro,
+		sans-serif;
+	max-height: toRem(200);
+	overflow-y: auto;
+	cursor: pointer;
+
+	input {
+		padding: toRem(3);
+		border: toRem(1) solid #333;
+		border-radius: toRem(4);
+		width: 80%;
+		margin-block-end: toRem(3);
+		&:focus {
+			outline: none;
+			border-color: #055d4a;
+			box-shadow: 0 0 0 toRem(2) rgba(0, 123, 255, 0.2);
+		}
+	}
+
+	#formatBtn,
+	#convertDateBtn,
+	#checkDayBtn {
+		padding: toRem(5);
+		border: toRem(1) solid #333;
+		background-color: #055d4a;
+		color: #f9f9f9;
+		border-radius: toRem(4);
+		transition: background-color 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #ff4500;
+			}
+		}
+	}
+	summary {
+		font-weight: 700;
+		margin-block-end: toRem(5);
+	}
+
+	pre {
+		background: #f9f9f9;
+		padding: toRem(10);
+		overflow-x: auto;
+		overflow-y: auto;
+		max-width: 100%;
+		white-space: pre-wrap;
+		word-break: break-word;
+	}
+
+	code {
+	}
+}
+
+button{
+	padding: toRem(10) toRem(20);
+background-color: #ff914d;
+color: #1d1d1d;
+font-weight: 600;
+font-size: toRem(18);
+		border: toRem(2) solid #ce4813;
+border-radius: toRem(10);
+}
+.footer,
+.header {
+	background-color: $bgcolor-dark;
+	color: $color-white;
+}
+
+/* -------footer--------------------- */
+
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: toRem(15);
+	inline-size: 100%;
+	padding: toRem(10);
+
+	//.footer__link
+	&__link {
+		font-weight: 600;
+		line-height: 1.2;
+		font-style: italic;
+		padding: toRem(10);
+		transition: color 0.3s;
+		@media (min-width: toEm(720.98)) {
+			font-size: toRem(20);
+			padding: toRem(10) toRem(30);
+			justify-content: space-around;
+		}
+	}
+}
+
+// ==================================================

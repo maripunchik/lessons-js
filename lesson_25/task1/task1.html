@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/task.css">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<title>Symbol. Колекції. Ітератори. Генератори.</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" id="header">
+			<div class="header__container">
+				<div class="header__logo">
+					<img src="img/js-logo.jpg" alt="логотип компанії JavaScript" class="header__img">
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__task task">
+				<div class="task__container">
+					<h1 class="task__title">
+						Модулі. Mutation Onserver, Proxy. Асинхронна обробка. fetch
+					</h1>
+					<div class="task__wrapper wrapper">
+						<ul class="wrapper__list list">
+							<li class="list__item">
+								<p><strong>Задача 1.</strong> Використовуючи один з АРІ
+									https://github.com/public-apis/public-apis#animals
+									та функцію fetch організувати завантаження та відображення даних
+									Намагайтесь зробити це з використанням класів. Окремо клас для побудови розмітки. Окремо
+									клас, який буде
+									робити запити і
+									повертати результати.
+								</p>
+								<details>
+									<summary>Переглянути код</summary>
+									<pre>
+										<code>export default class ApiService {
+										constructor(api) {
+										this.api = api;
+										}
+										async getImage() {
+										try {
+										const response = await fetch(this.api);
+										console.log(response);
+										if (!response.ok) {
+										throw new Error(`HTTP error! status: ${response.status}`);
+										}
+										const data = await response.json();
+										console.log(data);
+										return data.image;
+										} catch (error) {
+										console.error("Виникла помилка при завантаженні зображення:", error);
+										return null;
+										}
+										}
+										}<br>
+										//---
+										export default class RenderImage {
+										constructor(containerElement, apiService) {
+										this.containerElement = containerElement;
+										this.apiService = apiService;
+										}
+										//---
+										createImageElement(src) {
+										const img = document.createElement("img");
+										img.src = src;
+										img.alt = "Random Fox Image";
+										return img;
+										}
+										//---
+										createButton() {
+										const btn = document.createElement("button");
+										btn.textContent = "Оновити";
+										btn.addEventListener("click", () => this.render());
+										return btn;
+										}
+										//---
+										async render() {
+										const src = await this.apiService.getImage();
+										if (!src) return;
+										this.containerElement.innerHTML = "";
+										const img = this.createImageElement(src);
+										const btn = this.createButton();
+										this.containerElement.append(img, btn);
+										}
+										}<br>
+										//---
+										import ApiService from "./ApiService.js";
+										import RenderImage from "./RenderImage.js";
+										const api = new ApiService("https://randomfox.ca/floof/");
+										const container = document.querySelector(".wrapper__image-container");
+										const renderer = new RenderImage(container, api);
+										renderer.render();
+						
+</code>
+									</pre>
+								</details>
+							</li>
+						</ul>
+						<div class="wrapper__image-container"></div>
+						<script type="module" src="js/task_01.js"></script>
+					</div>
+
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<a class="footer__link" href="../index.html">Урок №25. Модулі. Mutation Onserver, Proxy. Асинхронна обробка.
+				fetch</a>
+			<a class="footer__link" href="../../index.html">На головну сторінку</a>
+		</footer>
+	</div>
+</body>
+
+</html>
